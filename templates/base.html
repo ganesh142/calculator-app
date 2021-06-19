@@ -1,0 +1,114 @@
+<style>
+    input{
+        width:1.2cm;
+        height:8mm;
+        font-weight:bold;
+        background-color: white;
+       
+    }
+    #id1{
+        width:4cm;
+    }
+</style>
+<script>
+    var str='{{val1}}'
+    function add1(){
+        str=str+document.getElementById("str1").value
+        document.getElementById("id1").value=str
+    }
+    function add2(){
+        str=str+document.getElementById("str2").value
+        document.getElementById("id1").value=str
+    }
+    function add3(){
+        str=str+document.getElementById("str3").value
+        document.getElementById("id1").value=str
+    }
+    function add4(){
+        str=str+document.getElementById("str4").value
+        document.getElementById("id1").value=str
+    }
+    function add5(){
+        str=str+document.getElementById("str5").value
+        document.getElementById("id1").value=str
+    }
+    function add6(){
+        str=str+document.getElementById("str6").value
+        document.getElementById("id1").value=str
+    }
+    function add7(){
+        str=str+document.getElementById("str7").value
+        document.getElementById("id1").value=str
+    }
+    function add8(){
+        str=str+document.getElementById("str8").value
+        document.getElementById("id1").value=str
+    }
+    function add9(){
+        str=str+document.getElementById("str9").value
+        document.getElementById("id1").value=str
+    }
+    function add0(){
+        str=str+document.getElementById("str0").value
+        document.getElementById("id1").value=str
+    }
+    function addpl(){
+        str=str+document.getElementById("strpl").value
+        document.getElementById("id1").value=str
+    }
+    function addmn(){
+        str=str+document.getElementById("strmn").value
+        document.getElementById("id1").value=str
+    }
+    function addmt(){
+        str=str+document.getElementById("strmt").value
+        document.getElementById("id1").value=str
+    }
+    function adddv(){
+        str=str+document.getElementById("strdv").value
+        document.getElementById("id1").value=str
+    }
+    function addrd(){
+        str=str+document.getElementById("strrd").value
+        document.getElementById("id1").value=str
+    }
+    function clr()
+    {
+        str=''
+        document.getElementById("id1").value=""
+    }
+   
+</script>
+<form action="report" method="post">
+    {% csrf_token %}
+<table>
+    <tr>
+        <td colspan="3"><input type="text" id="id1" name="expression" value="{{val1}}" /></td>
+        <td><input type="submit" value="ANS" /></td>
+    </tr>
+<tr>
+    <td><input type="button" value="C" id="clear" onclick="clr()" /></td>
+    <td><input type="button" value="." id="strrd" onclick="addrd()"/></td>
+    <td><input type="button" value="0" id="str0" onclick="add0()"/></td>
+    <td><input type="button" value="/" id="strdv" onclick="adddv()"/></td>
+</tr>
+<tr>
+<td><input type="button" value="7" id="str7" onclick="add7()"/></td>
+<td><input type="button" value="8" id="str8" onclick="add8()" /></td>
+<td><input type="button" value="9" id="str9" onclick="add9()"/></td>
+<td><input type="button" value="*" id="strmt" onclick="addmt()"/></td>
+</tr>
+<tr>
+<td><input type="button" value="4" id="str4" onclick="add4()" /></td>
+<td><input type="button" value="5" id="str5" onclick="add5()"/></td>
+<td><input type="button" value="6" id="str6" onclick="add6()"/></td>
+<td><input type="button" value="-" id="strmn" onclick="addmn()"/></td>
+</tr>
+<tr>
+<td><input type="button" value="1" id="str1" onclick="add1()"/></td>
+<td><input type="button" value="2" id="str2" onclick="add2()"/></td>
+<td><input type="button" value="3" id="str3" onclick="add3()"/></td>
+<td><input type="button" value="+" id="strpl" onclick="addpl()"/></td>
+</tr>
+</table>
+</form>
